@@ -144,3 +144,25 @@ game:GetService("VirtualInputManager"):SendMouseButtonEvent(0, 0, 0, true, game,
     end
  end    
 })
+
+local function tatata()
+local healhs = {}
+for _, player in ipairs(game.Players:GetPlayers()) do
+   if player.Character.Humanoid then
+table.insert(healhs, player.Name .. ": " .. player.Character.Humanoid.MaxHealth)
+  end
+end
+  return table.concat(healhs, "\n")
+end
+
+Tab:AddButton({
+ Name = "Find out the HP of all players",
+ Callback = function()
+        OrionLib:MakeNotification({
+	Name = "Budgie Hub",
+	Content = "\n" .. tatata(),
+	Image = "rbxassetid://4483345998",
+	Time = 5
+        })
+   end    
+})
