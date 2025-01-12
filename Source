@@ -106,7 +106,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("QuestG
 
 for _, name in ipairs(shards) do
 local args = {
-    [1] = workspace:WaitForChild("ScavengerPieces"):WaitForChild(shards .. " Shard")
+    [1] = workspace:WaitForChild("ScavengerPieces"):WaitForChild(name .. " Shard")
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ScavengerHunt"):FireServer(unpack(args))
