@@ -166,3 +166,112 @@ Tab:AddButton({
         })
    end    
 })
+
+Tab:AddButton({
+ Name = "Anti afk",
+ Callback = function()
+ for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+  v:Disable()
+ end
+   end    
+})
+
+Tab:AddToggle({
+ Name = "Auto farm brawlers",
+ Default = false,
+ Callback = function(Value)
+tatat = Value
+  while tatat do
+ for _, person in ipairs(workspace:GetDescendants()) do
+    pcall(function()
+      if tatat == false then return end
+  if person:IsA("Humanoid") and person.Parent.Name == "Brawler" and person.Health > 0 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = person.RootPart.CFrame * CFrame.new(0, 0, 1)
+task.wait(0.4)
+   end
+  end)
+ end
+ task.wait(0.25)
+end
+ end    
+})
+
+Tab:AddToggle({
+ Name = "Auto farm goons",
+ Default = false,
+ Callback = function(Value)
+tbtbt = Value
+   while tbtbt do
+ for _, person in ipairs(workspace:GetDescendants()) do
+    pcall(function()
+      if tbtbt == false then return end
+  if person:IsA("Humanoid") and person.Parent.Name == "Goon" and person.Health > 0 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = person.RootPart.CFrame * CFrame.new(0, 0, 1)
+task.wait(0.4)
+   end
+  end)
+ end
+ task.wait(0.25)
+end
+ end    
+})
+
+Tab:AddToggle({
+ Name = "Auto farm crooks",
+ Default = false,
+ Callback = function(Value)
+tctct = Value
+  while tctct do
+ for _, person in ipairs(workspace:GetDescendants()) do
+    pcall(function()
+      if tctct == false then return end
+  if person:IsA("Humanoid") and person.Parent.Name == "Crook" and person.Health > 0 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = person.RootPart.CFrame * CFrame.new(0, 0, 1)
+task.wait(0.4)
+   end
+  end)
+ end
+ task.wait(0.25)
+end
+ end    
+})
+
+Tab:AddToggle({
+ Name = "Auto farm purgers",
+ Default = false,
+ Callback = function(Value)
+tdtdt = Value
+  while tdtdt do
+ for _, person in ipairs(workspace:GetDescendants()) do
+    pcall(function()
+      if tdtdt == false then return end
+  if person:IsA("Humanoid") and person.Parent.Name == "Purger" and person.Health > 0 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = person.RootPart.CFrame * CFrame.new(0, 0, 1)
+task.wait(0.4)
+   end
+  end)
+ end
+ task.wait(0.25)
+end
+ end    
+})
+
+Tab:AddToggle({
+ Name = "Auto farm brutes",
+ Default = false,
+ Callback = function(Value)
+tetet = Value
+  while tetet do
+ for _, person in ipairs(workspace:GetDescendants()) do
+    pcall(function()
+      if tetet == false then return end
+  if person:IsA("Humanoid") and person.Parent.Name == "Brute" and person.Health > 0 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = person.RootPart.CFrame * CFrame.new(0, 0, 1)
+task.wait(0.4)
+   end
+  end)
+ end
+ task.wait(0.25)
+end
+ end    
+})
